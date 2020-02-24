@@ -1,8 +1,8 @@
 from django.urls import path
 
-from calculater import views
+from calculator import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('<str:room_name>/', views.room, name='room'),
+
 ]
