@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Calculator POSE</title>
+</head>
+
+    <h1>Welcome to the best Calculator app</h1>
+
+    <br/>
+    Add Number to calculate
+    <br/>
+     <br/>
+    <form action="calc" method="POST">
+    {% csrf_token %}
+
+    <input name="X" type="text" size="60"/><br/>
+     <br/>
+    <input name="Y" type="text" size="60"/><br/>
+
+     <br/>
+
+     <label>Operation : {{operation }}</label><br><br>
+
+    <input id="plus-submit"  value="+" name="plus-submit" type="submit"/>
+    <input id="minus-submit" value="-" name="minus-submit" type="submit"/>
+
+     <input id="multiply-submit" value="*" name="multiply-submit" type="submit"/>
+     <input id="divide-submit" value="/" name="divide-submit" type="submit"/>
+
+    </form>
+
+    <br/>
+
+
+   <label name="result_label" id="lb01">Result is : {{ Result }}</label><br><br>
+     <label>Calculation Log</label><br/>
+
+    <textarea id="result_logs" rows="10" cols="60"name="result_logs">{{ result_logs }}</textarea>
+
+</body>
+</html>

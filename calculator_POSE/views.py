@@ -3,11 +3,13 @@ from django.shortcuts import render
 from calculator_POSE.models import Calculate_log
 
 
-def index(request):  # render index.html
+def index(request):  # render calcGET.html
     return render(request, 'index.html')
 
+def callPOSE(request):  # render calcGET.html
+    return render(request, 'calcPOSE.html.html')
 
-def calculate(request):
+def calculatePOSE(request):
     if request.POST.get('X') and request.POST.get('Y'):
         if request.POST.get('plus-submit',''):
             x = request.POST.get('X')
@@ -28,7 +30,7 @@ def calculate(request):
             for i in splitlog:
                 output_log += str(i + '\n')
 
-            return render(request, 'index.html', {'Result': result,'result_logs': output_log,'operation':x+'+'+y})
+            return render(request, 'calcPOSE.html', {'Result': result, 'result_logs': output_log, 'operation': x + '+' + y})
 
         elif request.POST.get('minus-submit', ''):
             x = request.POST.get('X')
@@ -48,7 +50,7 @@ def calculate(request):
             for i in splitlog:
                 output_log += str(i + '\n')
 
-            return render(request, 'index.html', {'Result': result, 'result_logs': output_log})
+            return render(request, 'calcPOSE.html', {'Result': result, 'result_logs': output_log})
 
         elif request.POST.get('multiply-submit', ''):
             x = request.POST.get('X')
@@ -69,7 +71,7 @@ def calculate(request):
             for i in splitlog:
                 output_log += str(i + '\n')
 
-            return render(request, 'index.html', {'Result': result, 'result_logs': output_log})
+            return render(request, 'calcPOSE.html', {'Result': result, 'result_logs': output_log})
 
         elif request.POST.get('divide-submit', ''):
             x = request.POST.get('X')
@@ -90,6 +92,6 @@ def calculate(request):
             for i in splitlog:
                 output_log += str(i + '\n')
 
-            return render(request, 'index.html', {'Result': result, 'result_logs': output_log})
+            return render(request, 'calcPOSE.html', {'Result': result, 'result_logs': output_log})
     else:
-        return render(request, 'index.html', {'Result': "Please Enter Number"})
+        return render(request, 'calcPOSE.html', {'Result': "Please Enter Number"})

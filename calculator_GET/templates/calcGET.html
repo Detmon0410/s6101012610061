@@ -6,12 +6,13 @@
 </head>
 
     <h1>Welcome to the best Calculator app</h1>
+    <h2>GET VERSION </h2>
 
     <br/>
     Add Number to calculate
     <br/>
      <br/>
-    <form action="calc" method="POST">
+    <form action="calc" method="GET">
     {% csrf_token %}
 
     <input name="X" type="text" size="60"/><br/>
