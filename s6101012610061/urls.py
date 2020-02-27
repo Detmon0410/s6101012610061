@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    # set homepage to calculator.urls
-    path('', include('calculator.urls')),
+    # set homepage to calculator_POSE.urls
+    path('', include('calculator_POSE.urls')),
     path('admin/', admin.site.urls),
 ]

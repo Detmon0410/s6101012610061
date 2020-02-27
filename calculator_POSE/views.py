@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from calculator.models import Calculate_log
+from calculator_POSE.models import Calculate_log
 
 
 def index(request):  # render index.html
