@@ -6,7 +6,7 @@ from django.contrib import admin
 urlpatterns = [
     # link path to views.py
     path('', views.index, name='index'),
-    path('calc', views.index, name='calculate'),
+    path('calc', views.calculatePOSE, name='calculate'),
     path('admin/', admin.site.urls),
 
 ]

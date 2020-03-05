@@ -19,7 +19,6 @@ from django.urls import include, path
 urlpatterns = [
     # set homepage to calculator_POSE.urls
     path('', include('calculator_POSE.urls')),
-    path('/calcP', include('calculator_POSE.urls')),
 
     path('admin/', admin.site.urls),
 ]
